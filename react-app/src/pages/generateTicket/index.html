@@ -1,0 +1,177 @@
+<html>
+
+<head>
+    <title>Pushpak ANPR</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid p-5 bg-dark text-white text-center">
+        <h1>Pushpak ANPR API Demo</h1>
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 m-auto">
+                <div class="form-group">
+                    <form id="imageForm">
+                        <label for="imageInput">Select an image to upload:</label><br>
+                        <input type="file" id="imageInput" name="file"><br><br>
+                        <button type="submit" id="uploadBtn">Upload</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 m-auto">
+                <div class="form-group">
+                    <label for="outputText">Detected LPN String:</label>
+                    <div id="output">HR28BW0271</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 m-auto">
+
+                <div class="form-group">
+                    <form id="uploadImgs">
+                        <button type="button" id="fetchBtn" onclick="show()" disabled="">Fetch Uploaded Images</button>
+                    </form>
+                </div><br><br>
+                <div id="image-container">
+                    <!-- Images will be inserted here -->
+                    <img src="https://anpr-api.pushpak.cloud/data/images-input/car.jpg"
+                        style="width: 20%; padding: 10px;"><img
+                        src="https://anpr-api.pushpak.cloud/data/images-input/image (1).jpg"
+                        style="width: 20%; padding: 10px;"><img
+                        src="https://anpr-api.pushpak.cloud/data/images-input/Bike-Number-Plate-Frame-For-SDL390200135-6-e96f1.jpg"
+                        style="width: 20%; padding: 10px;"><img
+                        src="https://anpr-api.pushpak.cloud/data/images-input/image.jpg"
+                        style="width: 20%; padding: 10px;"><img
+                        src="https://anpr-api.pushpak.cloud/data/images-input/Nexon-EV-3.jpg"
+                        style="width: 20%; padding: 10px;"><img
+                        src="https://anpr-api.pushpak.cloud/data/images-input/A4D3B4FB-1464-49D3-86F6-59F208873B70.png"
+                        style="width: 20%; padding: 10px;"><img
+                        src="https://anpr-api.pushpak.cloud/data/images-input/AS_PHIL_OT1.jpg"
+                        style="width: 20%; padding: 10px;"><img
+                        src="https://anpr-api.pushpak.cloud/data/images-input/Car-Number-Plate.webp"
+                        style="width: 20%; padding: 10px;"><img
+                        src="https://anpr-api.pushpak.cloud/data/images-input/Screenshot from 2023-03-11 13-42-37.png"
+                        style="width: 20%; padding: 10px;"><img
+                        src="https://anpr-api.pushpak.cloud/data/images-input/IMG_202304070822292da48.jpg"
+                        style="width: 20%; padding: 10px;"><img
+                        src="https://anpr-api.pushpak.cloud/data/images-input/IMG_20221219_162204_378.jpg"
+                        style="width: 20%; padding: 10px;"><img
+                        src="https://anpr-api.pushpak.cloud/data/images-input/MicrosoftTeams-image (16).png"
+                        style="width: 20%; padding: 10px;"><img
+                        src="https://anpr-api.pushpak.cloud/data/images-input/a3.jpg"
+                        style="width: 20%; padding: 10px;"><img
+                        src="https://anpr-api.pushpak.cloud/data/images-input/images.jpg"
+                        style="width: 20%; padding: 10px;"><img
+                        src="https://anpr-api.pushpak.cloud/data/images-input/IMG_202304070825587304a.jpg"
+                        style="width: 20%; padding: 10px;"><img
+                        src="https://anpr-api.pushpak.cloud/data/images-input/Car-Number-Plate (1).webp"
+                        style="width: 20%; padding: 10px;"><img
+                        src="https://anpr-api.pushpak.cloud/data/images-input/numberplate.jpg"
+                        style="width: 20%; padding: 10px;"><img
+                        src="https://anpr-api.pushpak.cloud/data/images-input/IMG_20220312_165717_114.jpg"
+                        style="width: 20%; padding: 10px;"><img
+                        src="https://anpr-api.pushpak.cloud/data/images-input/IMG_2023040708214491011.jpg"
+                        style="width: 20%; padding: 10px;"><img
+                        src="https://anpr-api.pushpak.cloud/data/images-input/IMG_202303221131080ce29.jpg"
+                        style="width: 20%; padding: 10px;"><img
+                        src="https://anpr-api.pushpak.cloud/data/images-input/Screenshot from 2023-03-12 13-14-27.png"
+                        style="width: 20%; padding: 10px;"><img
+                        src="https://anpr-api.pushpak.cloud/data/images-input/kia-seltos-car-number-plate-designs-1-1.jpeg"
+                        style="width: 20%; padding: 10px;"><img
+                        src="https://anpr-api.pushpak.cloud/data/images-input/Kona1.jpg"
+                        style="width: 20%; padding: 10px;"><img
+                        src="https://anpr-api.pushpak.cloud/data/images-input/IMG_20230322024628c5b45.jpg"
+                        style="width: 20%; padding: 10px;"><img
+                        src="https://anpr-api.pushpak.cloud/data/images-input/IMG_20221219_164243_497.jpg"
+                        style="width: 20%; padding: 10px;"><img
+                        src="https://anpr-api.pushpak.cloud/data/images-input/anpr.png"
+                        style="width: 20%; padding: 10px;"><img
+                        src="https://anpr-api.pushpak.cloud/data/images-input/IMG_2023040708485396e44.jpg"
+                        style="width: 20%; padding: 10px;"><img
+                        src="https://anpr-api.pushpak.cloud/data/images-input/download.jpg"
+                        style="width: 20%; padding: 10px;"><img
+                        src="https://anpr-api.pushpak.cloud/data/images-input/download.png"
+                        style="width: 20%; padding: 10px;"><img
+                        src="https://anpr-api.pushpak.cloud/data/images-input/a1.jpg"
+                        style="width: 20%; padding: 10px;"><img
+                        src="https://anpr-api.pushpak.cloud/data/images-input/IMG20180726110359.jpg"
+                        style="width: 20%; padding: 10px;"><img
+                        src="https://anpr-api.pushpak.cloud/data/images-input/20-1461155095-yellow.jpg"
+                        style="width: 20%; padding: 10px;"><img
+                        src="https://anpr-api.pushpak.cloud/data/images-input/Screenshot-20230310210234-1742x819.png"
+                        style="width: 20%; padding: 10px;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        document.getElementById('imageForm').addEventListener('submit', function (event) {
+            document.getElementById("uploadBtn").disabled = true;
+            event.preventDefault();
+            const formData = new FormData();
+            console.log(document.getElementById('imageInput').files[0]);
+            formData.append('file', document.getElementById('imageInput').files[0]);
+            console.log(formData); console.log("hi"); fetch('https://anpr-api.pushpak.cloud/api/v1/plate_number', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    const dataOutput = data.plate_number
+                    if (dataOutput === "") {
+                        document.getElementById('output').innerHTML = "No LPN Detected";
+                    } else {
+                        document.getElementById('output').innerHTML = dataOutput;
+                    }
+                    document.getElementById("uploadBtn").disabled = false;
+                });
+        });
+
+
+        function show() {
+            document.getElementById("fetchBtn").disabled = true;
+
+            fetch('https://anpr-api.pushpak.cloud/api/v1/uploaded_files')
+                .then(response => response.json())
+                .then(data => {
+                    // Get the container element
+                    const container = document.getElementById('image-container');
+                    const imgs = data.uploaded_images;
+                    // Iterate through the list of image URLs
+                    imgs.forEach(imageUrl => {
+                        // Create an <img> element for each image
+                        const imgElement = document.createElement('img');
+
+                        // Set the src attribute to the image URL
+                        imgElement.src = imageUrl;
+                        imgElement.style.width = "20%";
+                        imgElement.style.padding = "10px";
+                        // Append the <img> element to the container
+                        container.appendChild(imgElement);
+                    });
+                });
+        }
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+{
+	"deployment": {
+		"name": "parking-management-service",
+		"stack": "node16",
+		"type": "advancedio"
+	},
+	"execution": {
+		"main": "app.js"
+	}
+}

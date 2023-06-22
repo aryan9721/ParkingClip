@@ -1,0 +1,52 @@
+{
+  "defaults": {
+    "project": 1,
+    "env": 1
+  },
+  "actives": {
+    "project": 1,
+    "env": 1
+  },
+  "projects": [
+    {
+      "idx": 1,
+      "id": "551000000011001",
+      "name": "parking-management-service",
+      "domain": {
+        "id": "10054401211",
+        "name": "parking-management-service-804561330.development"
+      },
+      "env": [
+        {
+          "idx": 1,
+          "id": "804561330",
+          "name": "Development",
+          "type": 3,
+          "env_status": "Active",
+          "project_details": {
+            "project_name": "parking-management-service",
+            "id": "551000000011001",
+            "project_type": "Live"
+          },
+          "is_default": false,
+          "action_required": false
+        },
+        {
+          "idx": 2,
+          "id": "10054524108",
+          "name": "Production",
+          "type": 1,
+          "env_status": "Active",
+          "project_details": {
+            "project_name": "parking-management-service",
+            "id": "551000000011001",
+            "project_type": "Live"
+          },
+          "is_default": true,
+          "clone_env_id": "804561330",
+          "action_required": false
+        }
+      ]
+    }
+  ]
+}

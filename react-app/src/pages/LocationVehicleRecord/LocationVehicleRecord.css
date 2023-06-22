@@ -1,0 +1,129 @@
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  background-color: #fff;
+}
+
+.header{
+  height: 70px;
+  align-items: center;
+  /* justify-content: center; */
+  display: flex;
+  margin-left: -10px;
+  /* border-width: 1; */
+  justify-content: space-between;
+}
+.headingText{
+  font-size: 18px;
+}
+
+.wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.center{
+  align-self: center;
+  border: 3px solid #21BECC;
+  border-radius: 10px;
+  padding: 2px;
+}
+.ticket{
+  padding: 44px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  width: 428px;
+  margin-left: calc(50% - 214px);
+  background-color: #fff;
+  border: 1px solid grey;
+  overflow-y: scroll; /* Add this line to make the content scrollable */
+  max-height: 100vh;
+}
+.ticket::-webkit-scrollbar {
+  display: none;
+}
+.entryText{
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 22px;
+  color: #21BECC;
+}
+
+.borderContainer{
+  align-self: center;
+  border: 1px solid #21BECC;
+  border-radius: 10px;
+  padding: 0px 15px;
+}
+
+.footer {
+  background-color: rgba(217, 217, 217, 0.5);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer__options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.footer__options a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer__options a:hover {
+  text-decoration: underline;
+}
+
+.footer__social {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.footer__social svg {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+}
+
+.footer__copy {
+  font-size: 14px;
+  color: #777;
+  margin-top: 10px;
+}
+button {
+  width: 240px;
+  padding: 10px;
+  border: none;
+  background-color: #21becc;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.icons{
+  width: 23;
+  height: 23;
+}
+
+.details{
+  justify-content: space-between;
+  display: flex;
+  border-bottom: 0.2px solid grey;
+  margin: 8px 0px;
+  padding: 5px 0px;
+}
